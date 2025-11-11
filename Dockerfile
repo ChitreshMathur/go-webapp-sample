@@ -1,3 +1,5 @@
+FROM golang:latest
+
 ARG HTTP_PROXY
 ARG HTTPS_PROXY
 ARG NO_PROXY
@@ -9,7 +11,6 @@ ENV HTTPS_PROXY=${HTTPS_PROXY}
 ENV NO_PROXY=${NO_PROXY}
 ENV GOPROXY=${GOPROXY:-https://proxy.golang.org,direct}
 
-FROM golang:latest
 
 RUN mkdir /app
 
